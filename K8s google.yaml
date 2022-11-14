@@ -1,0 +1,23 @@
+Intalling CDK from google.com
+
+Intalling kubectl
+
+gcloud init проходим по ссылке и активируем
+
+
+gcloud services enable container.googleapis.com
+
+gcloud container clusters create "name of cluster"
+
+gcloud container clusters create "name of cluster" --num-nodes="количество серверов"
+
+gcloud container clusters get-credentials "name of cluster" - можно переключаться между кластерами
+
+kubectl cluster-info
+
+kubectl get componentstatuses
+
+kubectl get nodes
+
+gcloud container clusters delete "name of cluster"
+
