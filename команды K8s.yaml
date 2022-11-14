@@ -1,0 +1,4 @@
+eksctl create cluster --name alaframe-k8s создать кластер
+eksctl delete cluster --name alaframe-k8s удалить кластер
+
+eksctl create cluster -f myclaster.yaml
