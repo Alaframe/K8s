@@ -13,3 +13,19 @@ kubectl rollout status deployment/"deployment name"    -    статус в ре
 kubectl rollout undo deployment/"deployment name" --to-revision=версия изменений
 
 kubectl rollout restart deployment/"deployment name"    -    для обновления latest версии image
+
+kubectl expose deployment "deployment name" --type=NodePort --port 80
+
+kubectl discribe nodes | grep ExternalIP 
+                          
+                          
+                                      создание loadBalancer
+
+kubectl expose deployment "deployment name" --type=loadBalancer --port 80
+
+kubectl get svc                    - просмотр сервисов
+
+kubectl delete cvs "name pods"     - удаление сервисов
+
+kubectl delete deploy "name pods"  - удаление деплоев
+

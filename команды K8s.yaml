@@ -2,3 +2,28 @@ eksctl create cluster --name alaframe-k8s создать кластер
 eksctl delete cluster --name alaframe-k8s удалить кластер
 
 eksctl create cluster -f myclaster.yaml
+
+создание pods
+
+kubectl run "name pod" --generator=run-pod/v1 --image=nginx --port=80
+
+kubectl get pods
+
+kubectl delete pods "name pods"
+
+kubectl discribe pods "name pods" полная инфа
+
+kubectl exec "name pods" date
+
+kubectl exec -it "name pods" sh  - провалиться в pod
+
+kubectl port-forward "name pods" 7788:80
+
+kubectl apply -f "name of file manifest yaml"
+
+kubectl delete -f "name of file manifest yaml"
+
+
+ 
+
+
