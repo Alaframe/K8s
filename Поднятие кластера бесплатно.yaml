@@ -1,0 +1,13 @@
+http://labs.play-with-k8s.com
+
+1. Initializes cluster master node:
+
+kubeadm init --apiserver-advertise-address $(hostname -i) --pod-network-cidr 10.5.0.0/16
+
+2. Initialize cluster networking:
+
+kubectl apply -f https://raw.githubusercontent.com/cloudnativelabs/kube-router/master/daemonset/kubeadm-kuberouter.yaml
+
+Добавляем в каждую ноду:
+kubeadm join 192.168.0.9:6443 --token hzhp1v.g52kdpcgelg7e4ml \
+    --discovery-token-ca-cert-hash sha256:4a71a12f9d7f27badf500cd9faa4abb68dae0b8401ec67e78e3fe14d03b692bf

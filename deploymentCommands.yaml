@@ -1,0 +1,15 @@
+kubectl discribe deployment "deployment name"
+
+kubectl autoscale deployment "deployment name" --min=4 --max=6 --cpu-percent=80   -   запуск автоскейл с мин 4 депл и макс 6
+
+kubectl  rollout history deployment/"deployment name"     -     история изменений
+
+kubectl set image deployment/"deployment name" "image name"="new image" --record    -   изменение имеджа во всех деплоях
+
+kubectl rollout undo deployment/"deployment name"    -    возврат на предыдущую версию
+
+kubectl rollout status deployment/"deployment name"    -    статус в реальном времени
+
+kubectl rollout undo deployment/"deployment name" --to-revision=версия изменений
+
+kubectl rollout restart deployment/"deployment name"    -    для обновления latest версии image
